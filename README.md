@@ -1,6 +1,5 @@
 # Classical-Image-Segmentation-Pipeline-Mango-Leaf-Disease-Spot-Extraction
 
-# Classical Image Segmentation Pipeline: Mango Leaf Disease & Spot Extraction
 
 A small, fully classical (no deep learning) image-processing project that isolates a mango leaf from its background and extracts **anthracnose lesions** using color-based thresholding. The project compares:
 
