@@ -28,8 +28,8 @@ A small, fully classical (no deep learning) image-processing project that isolat
 **Result:** GrabCut produced the more precise leaf mask, so it is used as the first stage of the pipeline.
 
 <!-- Replace with your own figure -->
-![Otsu vs GrabCut](<img width="1188" height="410" alt="image" src="https://github.com/user-attachments/assets/a26fa591-17ff-40df-917b-a957a823c1eb" />
-)
+<img width="1188" height="410" alt="image" src="https://github.com/user-attachments/assets/a26fa591-17ff-40df-917b-a957a823c1eb" />
+
 
 Notes on the Otsu baseline:
 - `THRESH_BINARY_INV` is needed if the leaf is darker than the background, otherwise the mask comes out inverted.
