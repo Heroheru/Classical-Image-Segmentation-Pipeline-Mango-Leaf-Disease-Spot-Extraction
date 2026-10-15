@@ -1,0 +1,1 @@
+# Classical-Image-Segmentation-Pipeline-Mango-Leaf-Disease-Spot-Extraction
