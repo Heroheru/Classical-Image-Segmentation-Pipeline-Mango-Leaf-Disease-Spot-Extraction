@@ -43,9 +43,11 @@ After isolating the leaf, all color-space thresholding is done **only inside the
 
 ### CIELAB
 
-- The **a\*** channel runs from green (low) to red (high). Healthy leaf tissue has low a\*; necrotic brown tissue has higher a\*.
-- Brightness is separated into **L\***, so very dark lesion centers still carry usable chromatic information.
-- Result: a **complete, contiguous lesion mask** with smooth contours.
+- CIELAB Thresholding uses both chromatic channels, a* and b*:
+- a* runs from green (low) to red (high). Healthy leaf tissue has low a*; necrotic brown tissue has higher a*.
+- b* runs from blue (low) to yellow (high). Brown lesions are shifted toward yellow relative to green tissue, which adds a second cue to separate lesion from healthy leaf.
+- Brightness is separated into L*, so very dark lesion centers still carry usable chromatic information.
+- Result: a complete, contiguous lesion mask with smooth contours.
 
 ### HSV
 
@@ -64,13 +66,13 @@ After isolating the leaf, all color-space thresholding is done **only inside the
 
 ### Summary
 
-| Aspect | HSV (hue-based) | CIELAB (a\*) |
+| Aspect | HSV (H,S,V) | CIELAB (a\* b\*) |
 |---|---|---|
 | Lesion interior | Hollow / incomplete | Filled |
 | Boundary quality | Fragmented, noisy | Smooth, coherent |
-| Dark lesion centers | Hue unreliable | Handled via a\* independent of L\* |
-| Red-brown wrap-around issue | Yes | No (a\* is linear, not circular) |
-| Extra tricks needed | Dual hue ranges, S/V channels, hole filling | Single channel threshold |
+| Dark lesion centers | less unreliable | Handled via a\* b\* independent of L\* |
+| Red-brown wrap-around issue | Yes | No (a\*  b\*is linear, not circular) |
+
 
 **Conclusion:** on this sample, CIELAB was the more practical color space for anthracnose lesions. This does not mean HSV is unusable: thresholding on S or V, or handling the hue wrap-around, may improve it.
 
@@ -81,13 +83,12 @@ After isolating the leaf, all color-space thresholding is done **only inside the
 ```
 .
 ├── README.md
-├── notebook.ipynb          # full pipeline with visualizations
-├── data/
-│   └── sample_leaf.jpg     # sample mango leaf image
-└── images/                 # figures used in this README
+├── segmentation_thresholding.ipynb         
+├── sample_leaf.jpg 
+
+           
 ```
 
-*(Adjust names to match your repository.)*
 
 ## Requirements
 
