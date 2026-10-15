@@ -57,10 +57,10 @@ After isolating the leaf, all color-space thresholding is done **only inside the
 - The **Saturation** and **Value** channels show clearer lesion contrast than Hue, so the lesion information exists in HSV, just not in the hue channel.
 
 <!-- Replace with your own figures -->
-![HSV channels](<img width="592" height="307" alt="image" src="https://github.com/user-attachments/assets/f7b041cb-ac6e-45eb-b068-b3f0fa1ecf8d" />
-)
-![LAB vs HSV overlay](<img width="1178" height="380" alt="image" src="https://github.com/user-attachments/assets/45683294-13ff-4a97-9ff7-ef201e9d397c" />
-)
+<img width="592" height="307" alt="image" src="https://github.com/user-attachments/assets/f7b041cb-ac6e-45eb-b068-b3f0fa1ecf8d" />
+
+<img width="1178" height="380" alt="image" src="https://github.com/user-attachments/assets/45683294-13ff-4a97-9ff7-ef201e9d397c" />
+
 
 ### Summary
 
